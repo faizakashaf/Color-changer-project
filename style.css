@@ -1,0 +1,70 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+}
+.color{
+    width: 100px;
+    height: 100px;
+    border: none;
+    outline: none;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+}
+.boxes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+   gap: 40px;
+   margin: 20px auto;
+   
+}
+#red{
+    background-color: red;
+}
+#green{
+    background-color: green;
+}
+#blue{
+    background-color: blue;
+}
+#yellow{
+    background-color: yellow;
+}
+.guide{
+    display: flex;
+    justify-content: center;
+    min-width: 200px;
+}
+
+@media screen and (max-width:480){
+    .container{
+    height: 400px;
+    }
+    .header{
+        font-size: 1.2px;
+        margin-top: 40px;
+    }
+    .boxes{
+        
+        gap: 5px;
+        margin: 5px auto;
+    }
+    .color{
+        width: 50px;
+        height: 50px;
+    }
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Color Changer</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="header">Background Color Changer...</h1>
+        <div class="boxes">
+            <div class="color" id="blue"></div>
+            <div class="color" id="green"></div>
+            <div class="color" id="red"></div>
+            <div class="color" id="yellow"></div>
+        </div>
+        <h2 class="guide">Click the box and change the background color respectively!</h2>
+    </div>
+    <script>
+
+        const colors = document.querySelectorAll(".color");
+        const body = document.querySelector("body");
+        colors.forEach((color) => {
+            color.addEventListener("click", function () {
+                colors.forEach((c) => {
+                    c.style.border = "none";
+                })
+                let id = color.id;
+                body.style.backgroundColor = id;
+                color.style.border = "2px solid black"
+            })
+        });
+
+
+    </script>
+</body>
+
+</html>
